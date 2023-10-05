@@ -1,5 +1,5 @@
 let random = parseInt(Math.random() * 20 + 1);
-console.log(random)
+// console.log(random)
 
 let userInput = document.querySelector('.input');
 let submit = document.querySelector('.submit');
@@ -23,7 +23,7 @@ function validateGuess(guess) {
     if (isNaN(guess)) {
         error.textContent = 'Enter a Number';
     }
-    else if (guess < 1 || guess > 20) {
+    else if (guess < 1 || guess > 100) {
         error.textContent = 'Enter no. from 1 - 100';
     }
     else {
@@ -71,7 +71,7 @@ function newGame() {
     newBtn.style.visibility = "hidden"
 
     random = parseInt(Math.random() * 20 + 1);
-    console.log('New: ', random);
+    // console.log('New: ', random);
 
     prevGuess = [];
     error.innerHTML = '';
