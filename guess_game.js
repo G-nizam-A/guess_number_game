@@ -1,4 +1,4 @@
-let random = parseInt(Math.random() * 20 + 1);
+let random = parseInt(Math.random() * 100 + 1);
 // console.log(random)
 
 let userInput = document.querySelector('.input');
@@ -70,7 +70,7 @@ newBtn.addEventListener('click',newGame);
 function newGame() {
     newBtn.style.visibility = "hidden"
 
-    random = parseInt(Math.random() * 20 + 1);
+    random = parseInt(Math.random() * 100 + 1);
     // console.log('New: ', random);
 
     prevGuess = [];
