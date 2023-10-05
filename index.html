@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+            font-size: 18px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" class="input">
+        <input type="submit" class="submit"> <span class="error"> </span>
+    </form>
+    <div class="display">
+        <p>Guesses:<span class="guesses"></span></p>
+        <p>Remaining Guesses: <span class="remain-guess"></span></p>
+        <p>Hint: <span class="hint"></span></p>
+    </div>
+    <script src="guess_game.js"></script>
+</body>
+</html>
