@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .error{
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .error {
             color: red;
             font-size: 18px;
             font-style: italic;
         }
+
+        .main {
+            max-width: 50%;
+            background-color: aquamarine;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        form p {
+            font-size: 25px;
+            font-weight: bold;
+
+        }
+
+        .box {
+            background-color: brown;
+            width: 50vw;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-in {}
     </style>
 </head>
+
 <body>
-    <form>
-        <input type="text" class="input">
-        <input type="submit" class="submit"> <span class="error"> </span>
-    </form>
-    <div class="display">
-        <p>Guesses:<span class="guesses"></span></p>
-        <p>Remaining Guesses: <span class="remain-guess"></span></p>
-        <p>Hint: <span class="hint"></span></p>
+    <div class="main">
+       
+    </div>
+    <div class="box">
+        <div class="box-in">
+
+        </div>
     </div>
     <script src="guess_game.js"></script>
 </body>
+
 </html>

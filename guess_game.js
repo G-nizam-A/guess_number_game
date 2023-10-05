@@ -7,8 +7,7 @@ let guesses = document.querySelector('.guesses');
 let error = document.querySelector('.error');
 let remainGuess = document.querySelector('.remain-guess');
 let hint = document.querySelector('.hint');
-
-let newBtn = document.createElement('input');
+let newBtn = document.querySelector('.new-game');
 
 let prevGuess = [];
 remainGuess.textContent = Number(10);
@@ -59,20 +58,17 @@ function checkGuess(guess) {
 
 
 function endGame() {
-    newBtn.style.display = "block"
+    newBtn.style.visibility = "visible"
     userInput.setAttribute('disabled', '');
     submit.setAttribute('disabled', '');
     error.textContent = 'Game Over';
 
-    newBtn.setAttribute('type', 'button');
-    newBtn.setAttribute('value', 'New Game');
-    document.body.appendChild(newBtn);
 }
 
 newBtn.addEventListener('click',newGame);
 
 function newGame() {
-    newBtn.style.display = "none"
+    newBtn.style.visibility = "hidden"
 
     random = parseInt(Math.random() * 20 + 1);
     console.log('New: ', random);
