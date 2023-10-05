@@ -16,48 +16,77 @@
             height: 100%;
         }
 
-        .error {
-            color: red;
-            font-size: 18px;
-            font-style: italic;
-        }
-
-        .main {
-            max-width: 50%;
-            background-color: aquamarine;
-        }
-
-        form {
-            margin-top: 10px;
-        }
-
-        form p {
-            font-size: 25px;
-            font-weight: bold;
-
-        }
-
         .box {
-            background-color: brown;
-            width: 50vw;
-            height: 50vh;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
-        .box-in {}
+        main {
+            text-align: center;
+            min-width: 30%;
+            background-color: rgb(226, 226, 226);
+            margin-top: 16px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 0px red;
+        }
+
+        h1{
+            padding: 12px 0px;
+        }
+
+        .input {
+            height: 30px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+            padding: 0px 9px;
+        }
+
+        input[type="submit"] {
+            margin-top: 6px;
+            padding: 8px 20px;
+            border-radius: 4px;
+            background-color: dodgerblue;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+        input[type="button"] {
+            margin-top: 6px;
+            padding: 8px 20px;
+            border-radius: 4px;
+            background-color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            color: white;
+            visibility: hidden;
+        }
+        .display{
+            margin:12px 0px
+        }
+        .error{
+            color: red;
+            font-style: italic;
+        }
     </style>
 </head>
 
 <body>
-    <div class="main">
-       
-    </div>
     <div class="box">
-        <div class="box-in">
-
-        </div>
+        <main>
+            <form>
+                <h1>Guess a Number</h1>
+                <input type="text" class="input"><br>
+                <input type="submit" class="submit">
+                <input type="button" value="New Game" class="new-game">
+                <br><span class="error"> </span>
+            </form>
+            <div class="display">
+                <p>Guesses:<span class="guesses"></span></p>
+                <p>Remaining Guesses: <span class="remain-guess"></span></p>
+                <p>Hint: <span class="hint"></span></p>
+            </div>
+        </main>
     </div>
     <script src="guess_game.js"></script>
 </body>
