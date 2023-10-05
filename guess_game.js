@@ -8,6 +8,7 @@ let error = document.querySelector('.error');
 let remainGuess = document.querySelector('.remain-guess');
 let hint = document.querySelector('.hint');
 let newBtn = document.querySelector('.new-game');
+let ans = document.querySelector('.ans');
 
 let prevGuess = [];
 remainGuess.textContent = Number(10);
@@ -42,7 +43,7 @@ function validateGuess(guess) {
 
 function checkGuess(guess) {
     if (guess === random) {
-        hint.textContent = 'SUCCESS';
+        hint.textContent = `SUCCESS Value `;
         hint.style.color = "green";
         endGame();
     } else if (guess < random) {
@@ -62,7 +63,7 @@ function endGame() {
     userInput.setAttribute('disabled', '');
     submit.setAttribute('disabled', '');
     error.textContent = 'Game Over';
-
+    ans.innerHTML = `Number: ${random} `
 }
 
 newBtn.addEventListener('click',newGame);
@@ -77,6 +78,7 @@ function newGame() {
     error.innerHTML = '';
     guesses.textContent = '';
     hint.textContent = '';
+    ans.textContent = '';
 
     remainGuess.textContent = Number(10);
     userInput.removeAttribute('disabled');
